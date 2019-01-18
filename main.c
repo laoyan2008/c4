@@ -113,17 +113,53 @@ int main(){
         if(code==6)
         {
             
+            printf("总分最高的学生为：\n");
+
+            int max = 0;
+            int stuID = 0;
+            
+            for(int i = 0; i < index; i++)
+            {
+                int sum = arr[i].yw + arr[i].sx + arr[i].yy;
+                if(max < sum){
+                    max  =  sum;
+                    stuID = i;
+                }
+            }
+            printf("总分最高的学生姓名为%s，语文：%d，数学%d，英语%d\n",arr[stuID].name,arr[stuID].yw,arr[stuID].sx,arr[stuID].yingyu);
+            
+            printf("\n点击回车继续\n");
+            char x;
+            scanf("%c", &x);
+            scanf("%c", &x);
         }
         if(code==7)
         {
+            double max = 0.0;
+            int stuID = 0;
+            for(int  i = 0; i < index; i++)
+            {
+                if(arr[i].yw >= 60 && arr[i].sx >= 60 && arr[i].yy >= 60){
+                    double avg = (arr[i].yw + arr[i].sx + arr[i].yy)/3.0;
+                    if(max < avg){
+                        max = avg;
+                        stuID = i;
+                    }
+
+                }
+            }
+
+            printf("平均分最高且无不及格科目的学生姓名为%s，语文：%d，数学%d，英语%d\n",arr[stuID].name,arr[stuID].yuwen,arr[stuID].shuxue,arr[stuID].yingyu);
             
+            printf("\n点击回车继续\n");
+            char x;
+            scanf("%c", &x);
+            scanf("%c", &x);
         }
         if(code==8)
         {
             break;
         }
-        
-
     }
     return 0;
 
