@@ -92,7 +92,23 @@ int main(){
         }
         if(code==5)
         {
-            
+            for(int i=0;i<index;i++)
+            {
+                if(arr[i].yw<60 && arr[i].sx<60 && arr[i].yy<60)
+                {
+                    printf("%s同学各科成绩不及格",arr[i].name);
+                    char x;
+                    scanf("%c",&x);
+                    scanf("%c",&x);
+                }
+                else
+                {
+                    printf("无不及格同学");
+                    char x;
+                    scanf("%c",&x);
+                    scanf("%c",&x);
+                }
+            }
         }
         if(code==6)
         {
