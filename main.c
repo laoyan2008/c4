@@ -71,7 +71,24 @@ int main(){
         }
         if(code==4)
         {
-            
+            printf("总分不及格的学生有\n");
+            for(int i=0;i<index;i++)
+            {
+                if(arr[i].yw+arr[i].sx+arr[i].yy<180)
+                {
+                    printf("%s同学总成绩不及格",arr[i].name);
+                    char x;
+                    scanf("%c",&x);
+                    scanf("%c",&x);
+                }
+                else
+                {
+                    printf("无不及格同学");
+                    char x;
+                    scanf("%c",&x);
+                    scanf("%c",&x);
+                }
+            }
         }
         if(code==5)
         {
